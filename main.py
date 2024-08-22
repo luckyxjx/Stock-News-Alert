@@ -1,7 +1,7 @@
 import requests
 from twilio.rest import Client
-STOCK_NAME = "TSLA"
-COMPANY_NAME = "Tesla Inc"
+STOCK_NAME = "TSLA" # Write the Name of the stock you want to search
+COMPANY_NAME = "Tesla Inc" # Write the Name of the Company
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
