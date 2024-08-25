@@ -1,15 +1,24 @@
 import requests
 from twilio.rest import Client
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import os
+from dotenv import load_dotenv
+from datetime import datetime
+import csv
+
+load_dotenv()
+
 STOCK_NAME = "TSLA" # Write the Name of the stock you want to search
 COMPANY_NAME = "Tesla Inc" # Write the Name of the Company
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
-News_api = ''
-Stock_api = ''
 
-twilio_SID = ''
-AUTH_TOKEN = ''
+News_api = os.getenv('NEWS_API_KEY')
+Stock_api = os.getenv('STOCK_API_KEY')
+twilio_SID = os.getenv('TWILIO_SID')
+AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
 
 
 Stock_params = {
