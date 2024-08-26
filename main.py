@@ -83,9 +83,9 @@ try:
         client = Client(twilio_SID, AUTH_TOKEN)
         for article in new_news:
             message = client.messages.create(
-                from_='+16623732831',
+                from_='TWILIO_ACC_NUMBER',
                 body=article,
-                to='+917814866533'
+                to='YOUR_REAL_NUMBER'
             )
 
     # Read data from CSV and plot
